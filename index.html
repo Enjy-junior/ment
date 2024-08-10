@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Opulence - Sirops de Menthe</title>
+    <style>
+        body {
+            font-family: 'ARCHIVONARROW-REGULAR', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            background-color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+        header img {
+            height: 250px;
+        }
+        nav {
+            font-size: 16px;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .hero {
+            background-image: url('votre-image-de-sirop.jpg'); /* Remplacez par l'URL de votre image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-family: 'JACK PORTER DEMO', sans-serif;
+            font-size: 48px;
+            color: #008E52;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 24px;
+            color: #D3A454;
+        }
+        .hero a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #D3A454;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .download-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #008E52;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-family: 'JACK PORTER DEMO', sans-serif;
+            font-size: 36px;
+            color: #008E52;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 40px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-item h3 {
+            font-size: 20px;
+            color: #008E52;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 16px;
+            color: #000;
+        }
+        .product-item .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #D3A454;
+            margin-bottom: 10px;
+        }
+        .product-item button {
+            padding: 10px 20px;
+            background-color: #008E52;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .benefit-item {
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .benefit-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .testimonial-item {
+            margin-bottom: 20px;
+        }
+        .subscribe {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .subscribe input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #D3A454;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .subscribe button {
+            padding: 10px 20px;
+            background-color: #D3A454;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #f0f0f0;
+        }
+        footer a {
+            color: #008E52;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #D3A454;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #008E52;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .products, .benefits {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-item, .benefit-item {
+                width: 80%;
+            }
+            .download-buttons {
+                flex-direction: column;
+            }
+            .download-buttons a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="photo/logo 2.png" alt="Mint Opulence Logo">
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#products">Nos Produits</a>
+            <a href="#benefits">Bienfaits de la Menthe</a>
+            <a href="#testimonials">Témoignages</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Découvrez les Bienfaits Naturels de la Menthe</h1>
+        <p>Sirops artisanaux, fabriqués avec amour et bien-être</p>
+        <a href="#products">Explorez Nos Produits</a>
+        <div class="download-buttons">
+            <IMg src="icon1.jpg" height="40px"></IMg>
+            <IMg src="icone2.jpg" height="40px"></IMg>
+        </div>
+    </section>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Rechercher un produit, un bienfait...">
+        <button>Rechercher</button>
+    </div>
+
+    <section class="section" id="products">
+        <h2>Nos Sirops de Menthe</h2>
+        <p>Des saveurs uniques pour un bien-être quotidien</p>
+        <div class="products">
+            <div class="product-item">
+                <img src="photo/Mint Opulence f4.png" alt="Sirop Menthe Fraîche">
+                <h3>Sirop Menthe Fraîche</h3>
+                <p>Un goût pur et rafraîchissant pour toutes les occasions.</p>
+                <div class="price">Prix : 3,500 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product-item">
+                <img src="photo/Mint Opulence f7.png" alt="Sirop Menthe-Citron">
+                <h3>Sirop Menthe-Citron</h3>
+                <p>Un mélange parfait de menthe et de citron pour une saveur équilibrée.</p>
+                <div class="price">Prix : 4,000 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product-item">
+                <img src="photo/Mint Opulence f.png" alt="Sirop Menthe-Verveine">
+                <h3>Sirop Menthe-Verveine</h3>
+                <p>Une alliance apaisante pour les moments de détente.</p>
+                <div class="price">Prix : 4,500 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product-item">
+                <img src="photo/Mint Opulence f4.png" alt="Sirop Menthe Fraîche">
+                <h3>Sirop Menthe Fraîche</h3>
+                <p>Un goût pur et rafraîchissant pour toutes les occasions.</p>
+                <div class="price">Prix : 3,500 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product-item">
+                <img src="photo/Menthe_8.jpg" alt="Sirop Menthe-Citron">
+                <h3>Sirop Menthe-Citron</h3>
+                <p>Un mélange parfait de menthe et de citron pour une saveur équilibrée.</p>
+                <div class="price">Prix : 4,000 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product-item">
+                <img src="photo/faire-un-sirop-maison-removebg-preview.png" alt="Sirop Menthe-Verveine">
+                <h3>Sirop Menthe-Verveine</h3>
+                <p>Une alliance apaisante pour les moments de détente.</p>
+                <div class="price">Prix : 4,500 FCFA</div>
+                <button>Ajouter au panier</button>
+            </div>
+    </section>
+
+    <section class="section" id="benefits">
+        <h2>Les Bienfaits de la Menthe</h2>
+        <div class="benefits">
+            <div class="benefit-item">
+                <img src="photo/SOULA.jpeg" alt="Soulagement Digestif">
+                <h3>Soulagement Digestif</h3>
+                <p>La menthe aide à soulager les troubles digestifs et à améliorer la digestion.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="photo/HUMA.jpg" alt="Renforcement Immunitaire">
+                <h3>Renforcement Immunitaire</h3>
+                <p>La menthe renforce le système immunitaire grâce à ses propriétés antibactériennes.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="photo/RESPI.jpg" alt="Amélioration Respiratoire">
+                <h3>Amélioration Respiratoire</h3>
+                <p>Elle aide à dégager les voies respiratoires et à faciliter la respiration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials section" id="testimonials">
+        <h2>Ce Que Disent Nos Clients</h2>
+        <div class="testimonial-item">
+            <p>"Les sirops Mint Opulence ont vraiment changé ma routine quotidienne. J'adore la saveur et les bienfaits sont incroyables!" - Marie P.</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"Enfin un produit naturel qui fonctionne! J'ai ressenti une amélioration de ma digestion après quelques jours d'utilisation." - Jean K.</p>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <h2>Abonnez-vous</h2>
+        <p>Recevez nos offres exclusives et nos conseils bien-être</p>
+        <input type="email" placeholder="Votre email">
+        <button>S'abonner</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mint Opulence. Tous droits réservés.</p>
+        <a href="#">Mentions légales</a>
+        <a href="#">CGV</a>
+    </footer>
+    <div class="cart">
+        Voir Panier
+    </div>
+
+    <div class="cart-details">
+        <h3>Votre Panier</h3>
+        <ul id="cart-items">
+            <!-- Les produits ajoutés apparaîtront ici -->
+        </ul>
+        <p class="total">Total : <span id="cart-total">0</span> FCFA</p>
+        <button id="checkout">Finaliser la Commande</button>
+    </div>
+
+    <script>
+        const cartButton = document.querySelector('.cart');
+        const cartDetails = document.querySelector('.cart-details');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const checkoutButton = document.getElementById('checkout');
+        let cart = [];
+
+        // Affiche ou cache les détails du panier
+        cartButton.addEventListener('click', function() {
+            cartDetails.style.display = cartDetails.style.display === 'none' || cartDetails.style.display === '' ? 'block' : 'none';
+        });
+
+        // Fonction pour mettre à jour l'affichage du panier
+        function updateCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} x ${item.quantity} - ${item.price * item.quantity} FCFA`;
+                cartItems.appendChild(li);
+                total += item.price * item.quantity;
+            });
+            cartTotal.textContent = total;
+        }
+
+        // Ajout au panier
+        document.querySelectorAll('.product-item button').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const productPrice = parseInt(this.getAttribute('data-price'));
+
+                const existingProduct = cart.find(item => item.name === productName);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ name: productName, price: productPrice, quantity: 1 });
+                }
+
+                updateCart();
+                alert('Produit ajouté au panier !');
+            });
+        });
+
+        // Finaliser la commande
+        checkoutButton.addEventListener('click', function() {
+            if (cart.length > 0) {
+                alert('Merci pour votre achat ! Votre commande a été prise en compte.');
+                cart = [];
+                updateCart();
+                cartDetails.style.display = 'none';
+            } else {
+                alert('Votre panier est vide.');
+            }
+        });
+    </script>
+</body>
+</html>
